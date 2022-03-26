@@ -1,7 +1,5 @@
-package view;
+package controller;
 
-import java.util.Random;
-import java.util.concurrent.Semaphore;
 import java.util.Random;
 import java.util.concurrent.Semaphore;
 
@@ -12,7 +10,7 @@ public class Bilheteria extends Thread {
 	Random random = new Random();
 	private static int INGRESSOS = 100;
 	int tempo = 0;
-	
+
 	public Bilheteria(int idThread, Semaphore semaforo) {
 		this.idThread = idThread;
 		this.semaforo = semaforo;
@@ -56,7 +54,7 @@ public class Bilheteria extends Thread {
 	}
 
 	private void validacao() {
-		
+
 		int quantidadeBilhete = random.nextInt(4) + 1;
 
 		if (quantidadeBilhete <= INGRESSOS) {
