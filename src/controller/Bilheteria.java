@@ -60,7 +60,6 @@ public class Bilheteria extends Thread {
 		if (quantidadeBilhete <= INGRESSOS) {
 			try {
 				semaforo.acquire();
-//				INGRESSOS = INGRESSOS - quantidadeBilhete;
 				INGRESSOS -= quantidadeBilhete;
 				System.out.println("_________________________");
 				System.out.println("Compra #" + idThread + " finalizada.");
